@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Madvera</title>
-<meta name="description" content="Download Madvera — one file, straight to your computer. Ad generation coming soon: create winning Facebook ads with one prompt.">
-<meta property="og:title" content="Madvera">
-<meta property="og:description" content="Download Madvera. Ad generation coming soon — create winning Facebook ads with one prompt.">
+<title>Madvera — Podcast Ads Skill</title>
+<meta name="description" content="Download the Madvera Podcast Ads Skill for Claude Code. Madvera Ad Generation coming soon: create winning Facebook ads with one prompt.">
+<meta property="og:title" content="Madvera — Podcast Ads Skill">
+<meta property="og:description" content="Download the Podcast Ads Skill for Claude Code. Madvera Ad Generation coming soon: create winning Facebook ads with one prompt.">
 <meta name="theme-color" content="#E9EAE5">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23C90B5F'/%3E%3Ctext x='32' y='44' font-family='Arial Black, Arial' font-size='36' font-weight='900' fill='white' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -52,22 +52,8 @@
     background:var(--brand);display:inline-block;
   }
 
-  /* hero */
-  .hero{padding:54px 0 30px}
-  .hero h1{
-    font-family:"Archivo",sans-serif;
-    font-weight:800;font-stretch:112%;
-    font-size:clamp(34px,7vw,52px);
-    line-height:1.04;letter-spacing:-.015em;
-    max-width:12ch;
-  }
-  .hero p{
-    margin-top:14px;color:var(--muted);
-    font-size:18px;max-width:42ch;
-  }
-
   /* cards */
-  .feed{display:flex;flex-direction:column;gap:22px;padding-bottom:64px}
+  .feed{display:flex;flex-direction:column;gap:22px;padding-top:46px;padding-bottom:64px}
   .card{
     background:var(--card);
     border:1px solid var(--line);
@@ -84,11 +70,12 @@
   .card-meta .who{display:flex;align-items:center;gap:9px;color:var(--ink)}
   .card-meta .who .block{width:13px;height:13px;border-radius:3px;background:var(--brand)}
   .card-body{padding:24px 20px}
-  .card-body h2{
+  .card-body h1,.card-body h2{
     font-family:"Archivo",sans-serif;
     font-weight:750;font-stretch:106%;
     font-size:24px;line-height:1.15;letter-spacing:-.01em;
   }
+  .card-body .lede{margin-top:10px;font-weight:600;font-size:17px}
   .card-body .desc{margin-top:8px;color:var(--muted)}
 
   /* file row */
@@ -168,7 +155,7 @@
 
   @media (prefers-reduced-motion:no-preference){
     .rise{animation:rise .55s cubic-bezier(.22,.9,.3,1) backwards}
-    .d1{animation-delay:.05s}.d2{animation-delay:.14s}.d3{animation-delay:.23s}
+    .d1{animation-delay:.05s}.d2{animation-delay:.14s}
     @keyframes rise{from{opacity:0;transform:translateY(14px)}}
   }
 </style>
@@ -179,21 +166,16 @@
   <a class="wordmark" href="/" aria-label="Madvera home"><span class="block" aria-hidden="true"></span>MADVERA</a>
 </header>
 
-<section class="hero wrap rise d1">
-  <h1>Get Madvera.</h1>
-  <p>One file, straight to your computer. No signup, no installer, no nonsense.</p>
-</section>
-
 <main class="feed wrap">
 
-  <article class="card rise d2" id="download" aria-label="Madvera download">
+  <article class="card rise d1" id="download" aria-label="Podcast Ads Skill download">
     <div class="card-meta">
-      <span class="who"><span class="block" aria-hidden="true"></span>Madvera · Sponsored</span>
-      <span>1 of 1</span>
+      <span class="who"><span class="block" aria-hidden="true"></span>Madvera</span>
+      <span>CLAUDE CODE SKILL</span>
     </div>
     <div class="card-body">
-      <h2>The Madvera file.</h2>
-      <p class="desc">Everything Madvera fits in one download. Grab it, open it, go.</p>
+      <h1>Podcast Ads Skill</h1>
+      <p class="desc">Download the file and load it into Claude Code to start creating podcast ads.</p>
       <div class="file">
         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" aria-hidden="true">
           <rect x="4" y="2" width="22" height="26" rx="4" fill="#C90B5F" opacity=".12"/>
@@ -201,22 +183,23 @@
           <path d="M10 23h10" stroke="#C90B5F" stroke-width="2" stroke-linecap="round"/>
         </svg>
         <div>
-          <div class="name">madvera.zip</div>
+          <div class="name">podcast-ads-skill.zip</div>
           <div class="kind">ZIP · v1.0</div>
         </div>
       </div>
     </div>
     <div class="cta-bar">
       <span class="cta-note">Free. No email required.</span>
-      <a class="btn" href="downloads/madvera.zip" download="madvera.zip">Download</a>
+      <a class="btn" href="downloads/podcast-ads-skill.zip" download="podcast-ads-skill.zip">Download</a>
     </div>
   </article>
 
-  <article class="card rise d3" id="waitlist" aria-label="Madvera Ad Generation waitlist">
+  <article class="card rise d2" id="waitlist" aria-label="Madvera Ad Generation waitlist">
     <div class="card-body">
       <span class="eyebrow">WAITLIST OPEN</span>
       <h2>Madvera Ad Generation Coming Soon</h2>
-      <p class="desc">Create winning Facebook ads with one prompt</p>
+      <p class="lede">Create winning Facebook ads with one prompt.</p>
+      <p class="desc">Madvera studies the ads winning on Facebook right now and turns them into your blueprint. Describe your offer, and it builds ready-to-run creative modeled on what's already converting.</p>
       <form class="waitlist-form" id="waitlistForm" novalidate>
         <label class="honey" aria-hidden="true">Leave this empty <input type="text" name="_honey" tabindex="-1" autocomplete="off"></label>
         <input type="email" name="email" id="email" required placeholder="you@agency.com" autocomplete="email" aria-label="Email address">
@@ -269,7 +252,7 @@
           email: email.value.trim(),
           _subject: 'New Madvera waitlist signup',
           _template: 'table',
-          _autoresponse: "You're on the Madvera waitlist. We'll email you the moment Ad Generation goes live — winning Facebook ads from one prompt. — Madvera"
+          _autoresponse: "You're on the Madvera waitlist. We'll email you the moment Ad Generation goes live so you can create winning Facebook ads with one prompt."
         })
       });
       const data = await res.json().catch(() => ({}));

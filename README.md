@@ -1,16 +1,17 @@
 # Madvera landing page
 
-Single-page site: download Madvera + waitlist for Madvera Ad Generation.
+Single-page site: download the Podcast Ads Skill (for Claude Code) + waitlist for
+Madvera Ad Generation.
 
 **Live:** https://jordanyander.github.io/madvera/
 
 ## Swap in the real download
 
-The Download button serves `downloads/madvera.zip`. The file currently in the repo
-is a **placeholder** — replace it with the real file, keep the name `madvera.zip`,
-and nothing else needs to change. If you want a different filename/format, update
-the `href` on the Download button and the file-chip labels (`madvera.zip`,
-`ZIP · v1.0`) in `index.html`.
+The Download button serves `downloads/podcast-ads-skill.zip`. The file currently
+in the repo is a **placeholder** — replace it with the real skill file, keep the
+name `podcast-ads-skill.zip`, and nothing else needs to change. If you want a
+different filename/format, update the `href` on the Download button and the
+file-chip labels (`podcast-ads-skill.zip`, `ZIP · v1.0`) in `index.html`.
 
 ## Waitlist
 
