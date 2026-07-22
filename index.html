@@ -7,6 +7,7 @@
 <meta name="description" content="Download the Madvera Podcast Ads Skill for Claude Code. Madvera Ad Generation coming soon: create winning Facebook ads with one prompt.">
 <meta property="og:title" content="Madvera — Podcast Ads Skill">
 <meta property="og:description" content="Download the Podcast Ads Skill for Claude Code. Madvera Ad Generation coming soon: create winning Facebook ads with one prompt.">
+<meta property="og:image" content="https://jordanhayesmedia.github.io/madvera/assets/podcast-ad-example.jpg">
 <meta name="theme-color" content="#E9EAE5">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23C90B5F'/%3E%3Ctext x='32' y='44' font-family='Arial Black, Arial' font-size='36' font-weight='900' fill='white' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -54,6 +55,16 @@
 
   /* cards */
   .feed{display:flex;flex-direction:column;gap:22px;padding-top:46px;padding-bottom:64px}
+  .preview{display:flex;flex-direction:column;align-items:center;gap:11px;margin-bottom:4px}
+  .preview img{
+    width:min(320px,72vw);height:auto;
+    border:1px solid var(--line);border-radius:18px;
+    box-shadow:0 1px 2px rgba(23,23,27,.05),0 18px 44px -20px rgba(23,23,27,.22);
+  }
+  .preview figcaption{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:11px;letter-spacing:.09em;color:var(--muted);
+  }
   .card{
     background:var(--card);
     border:1px solid var(--line);
@@ -155,7 +166,7 @@
 
   @media (prefers-reduced-motion:no-preference){
     .rise{animation:rise .55s cubic-bezier(.22,.9,.3,1) backwards}
-    .d1{animation-delay:.05s}.d2{animation-delay:.14s}
+    .d1{animation-delay:.05s}.d2{animation-delay:.14s}.d3{animation-delay:.23s}
     @keyframes rise{from{opacity:0;transform:translateY(14px)}}
   }
 </style>
@@ -168,7 +179,12 @@
 
 <main class="feed wrap">
 
-  <article class="card rise d1" id="download" aria-label="Podcast Ads Skill download">
+  <figure class="preview rise d1">
+    <img src="assets/podcast-ad-example.jpg" width="320" height="429" alt="Still from an AI-generated podcast ad: a man in a studio speaking into a broadcast mic" loading="eager">
+    <figcaption>MADE WITH THE PODCAST ADS SKILL</figcaption>
+  </figure>
+
+  <article class="card rise d2" id="download" aria-label="Podcast Ads Skill download">
     <div class="card-meta">
       <span class="who"><span class="block" aria-hidden="true"></span>Madvera</span>
       <span>CLAUDE CODE SKILL</span>
@@ -194,7 +210,7 @@
     </div>
   </article>
 
-  <article class="card rise d2" id="waitlist" aria-label="Madvera Ad Generation waitlist">
+  <article class="card rise d3" id="waitlist" aria-label="Madvera Ad Generation waitlist">
     <div class="card-body">
       <span class="eyebrow">WAITLIST OPEN</span>
       <h2>Madvera Ad Generation Coming Soon</h2>

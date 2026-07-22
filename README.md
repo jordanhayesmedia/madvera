@@ -3,15 +3,17 @@
 Single-page site: download the Podcast Ads Skill (for Claude Code) + waitlist for
 Madvera Ad Generation.
 
-**Live:** https://jordanyander.github.io/madvera/
+**Live:** https://jordanhayesmedia.github.io/madvera/
 
-## Swap in the real download
+## The download
 
-The Download button serves `downloads/podcast-ads-skill.zip`. The file currently
-in the repo is a **placeholder** — replace it with the real skill file, keep the
-name `podcast-ads-skill.zip`, and nothing else needs to change. If you want a
-different filename/format, update the `href` on the Download button and the
-file-chip labels (`podcast-ads-skill.zip`, `ZIP · v1.0`) in `index.html`.
+`downloads/podcast-ads-skill.zip` contains the real skill: `make-podcast-ad/SKILL.md`
+(unzips straight into `~/.claude/skills/`). To ship an update, re-zip the skill
+folder over the same filename — no code changes needed:
+
+```bash
+cd /Users/jordanhayes/Madgenta/scratchpad && zip -r <repo>/downloads/podcast-ads-skill.zip make-podcast-ad -x "*.DS_Store"
+```
 
 ## Waitlist
 
