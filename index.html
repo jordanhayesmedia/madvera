@@ -261,18 +261,13 @@
     btn.textContent = 'Joining…';
 
     try {
-      const res = await fetch('https://formsubmit.co/ajax/jordan@hayesmedia.co', {
+      const res = await fetch('https://madvera-waitlist-production.up.railway.app/api/waitlist', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify({
-          email: email.value.trim(),
-          _subject: 'New Madvera waitlist signup',
-          _template: 'table',
-          _autoresponse: "You're on the Madvera waitlist. We'll email you the moment Ad Generation goes live so you can create winning Facebook ads with one prompt."
-        })
+        body: JSON.stringify({ email: email.value.trim(), _honey: form._honey.value })
       });
       const data = await res.json().catch(() => ({}));
-      if (res.ok && String(data.success) === 'true') {
+      if (res.ok && data.ok) {
         form.hidden = true;
         status.classList.add('ok');
         status.textContent = "You're on the list. A confirmation email is on its way.";

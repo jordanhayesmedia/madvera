@@ -1,0 +1,7 @@
+{
+  "name": "madvera-waitlist",
+  "private": true,
+  "type": "module",
+  "scripts": { "start": "node server.mjs" },
+  "engines": { "node": ">=20" }
+}

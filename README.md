@@ -17,18 +17,20 @@ cd /Users/jordanhayes/Madgenta/scratchpad && zip -r <repo>/downloads/podcast-ads
 
 ## Waitlist
 
-The form posts to [FormSubmit](https://formsubmit.co) (no account needed):
+The form posts to a micro service in `waitlist/` (Node, no deps) deployed on
+Railway (project **madvera-waitlist**, workspace "arnelbukva's Projects"):
+https://madvera-waitlist-production.up.railway.app
 
-- Signups arrive as email at **jordan@hayesmedia.co** (subject: "New Madvera waitlist signup").
-- Each subscriber gets an automatic **confirmation email** (`_autoresponse` in `index.html` — edit the text there).
-- **One-time activation:** the first submission triggers an activation email from
-  FormSubmit to jordan@hayesmedia.co. Click **Activate Form** in it — until then,
-  submissions are not forwarded.
-- Optional hardening: after activation, FormSubmit gives you a random endpoint
-  alias (e.g. `formsubmit.co/ajax/abc123…`) — swap it into the `fetch` URL in
-  `index.html` so the raw email address isn't visible in the page source.
-- Outgrowing email-inbox storage: point the form at Loops/Kit/MailerLite later —
-  it's one `fetch` URL change.
+Per signup it sends two emails via **Resend**:
+
+- **Notification** to `NOTIFY_TO` (jordan@hayesmedia.co) — "New Madvera waitlist signup".
+- **Confirmation** to the subscriber from `MAIL_FROM`
+  (currently `Madvera <madvera@notifications.osmihealth.co>` — the Resend-verified
+  Osmi domain; verify a Madvera domain in Resend later and update the var).
+
+Service env vars: `RESEND_API_KEY`, `MAIL_FROM`, `NOTIFY_TO`, `ALLOWED_ORIGIN`.
+Deploy changes with `railway up -d` from `waitlist/`. Confirmation copy lives in
+`waitlist/server.mjs`.
 
 ## Deploy
 
