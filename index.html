@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Madvera</title>
+<meta name="description" content="Download Madvera — one file, straight to your computer. Ad generation coming soon: create winning Facebook ads with one prompt.">
+<meta property="og:title" content="Madvera">
+<meta property="og:description" content="Download Madvera. Ad generation coming soon — create winning Facebook ads with one prompt.">
+<meta name="theme-color" content="#E9EAE5">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23C90B5F'/%3E%3Ctext x='32' y='44' font-family='Arial Black, Arial' font-size='36' font-weight='900' fill='white' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#E9EAE5;
+    --card:#FFFFFF;
+    --ink:#17171B;
+    --muted:#63655D;
+    --line:#D9DBD3;
+    --brand:#C90B5F;
+    --brand-deep:#A70950;
+    --ok:#0B7A45;
+    --radius:14px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:"Instrument Sans",system-ui,-apple-system,sans-serif;
+    font-size:16px;
+    line-height:1.55;
+    min-height:100svh;
+    display:flex;
+    flex-direction:column;
+  }
+  .wrap{width:100%;max-width:620px;margin:0 auto;padding:0 20px}
+
+  /* wordmark */
+  .top{padding:34px 0 0}
+  .wordmark{
+    display:inline-flex;align-items:center;gap:10px;
+    font-family:"Archivo",sans-serif;
+    font-weight:850;font-stretch:118%;
+    font-size:22px;letter-spacing:.04em;
+    text-decoration:none;color:var(--ink);
+  }
+  .wordmark .block{
+    width:16px;height:16px;border-radius:4px;
+    background:var(--brand);display:inline-block;
+  }
+
+  /* hero */
+  .hero{padding:54px 0 30px}
+  .hero h1{
+    font-family:"Archivo",sans-serif;
+    font-weight:800;font-stretch:112%;
+    font-size:clamp(34px,7vw,52px);
+    line-height:1.04;letter-spacing:-.015em;
+    max-width:12ch;
+  }
+  .hero p{
+    margin-top:14px;color:var(--muted);
+    font-size:18px;max-width:42ch;
+  }
+
+  /* cards */
+  .feed{display:flex;flex-direction:column;gap:22px;padding-bottom:64px}
+  .card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    box-shadow:0 1px 2px rgba(23,23,27,.04),0 12px 32px -18px rgba(23,23,27,.14);
+    overflow:hidden;
+  }
+  .card-meta{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:14px 20px;border-bottom:1px solid var(--line);
+    font-family:"IBM Plex Mono",monospace;
+    font-size:12px;color:var(--muted);letter-spacing:.02em;
+  }
+  .card-meta .who{display:flex;align-items:center;gap:9px;color:var(--ink)}
+  .card-meta .who .block{width:13px;height:13px;border-radius:3px;background:var(--brand)}
+  .card-body{padding:24px 20px}
+  .card-body h2{
+    font-family:"Archivo",sans-serif;
+    font-weight:750;font-stretch:106%;
+    font-size:24px;line-height:1.15;letter-spacing:-.01em;
+  }
+  .card-body .desc{margin-top:8px;color:var(--muted)}
+
+  /* file row */
+  .file{
+    margin-top:18px;display:flex;align-items:center;gap:13px;
+    border:1px solid var(--line);border-radius:10px;
+    padding:13px 16px;background:#FAFAF7;
+  }
+  .file svg{flex:none}
+  .file .name{font-weight:600;font-size:15px}
+  .file .kind{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:12px;color:var(--muted);margin-top:1px;
+  }
+
+  /* cta bar */
+  .cta-bar{
+    display:flex;align-items:center;justify-content:space-between;gap:14px;
+    padding:14px 20px;background:#FAFAF7;border-top:1px solid var(--line);
+  }
+  .cta-note{font-size:14px;color:var(--muted)}
+  .btn{
+    appearance:none;border:0;cursor:pointer;
+    display:inline-flex;align-items:center;gap:8px;
+    background:var(--brand);color:#fff;
+    font-family:"Instrument Sans",sans-serif;
+    font-weight:600;font-size:15px;
+    padding:12px 22px;border-radius:9px;
+    text-decoration:none;white-space:nowrap;
+    transition:background .15s ease,transform .1s ease;
+  }
+  .btn:hover{background:var(--brand-deep)}
+  .btn:active{transform:translateY(1px)}
+  .btn[disabled]{opacity:.6;cursor:default}
+
+  /* waitlist card */
+  .eyebrow{
+    display:inline-block;
+    font-family:"IBM Plex Mono",monospace;
+    font-size:11px;font-weight:500;letter-spacing:.08em;
+    color:var(--brand);border:1px solid currentColor;
+    border-radius:99px;padding:4px 10px;margin-bottom:14px;
+  }
+  .waitlist-form{margin-top:18px;display:flex;gap:10px}
+  .waitlist-form input{
+    flex:1;min-width:0;
+    font:inherit;color:var(--ink);
+    background:#fff;border:1px solid var(--line);
+    border-radius:9px;padding:12px 14px;
+  }
+  .waitlist-form input::placeholder{color:#9B9D95}
+  .form-status{margin-top:10px;font-size:14px;color:var(--muted);min-height:1.4em}
+  .form-status.ok{color:var(--ok);font-weight:500}
+  .form-status.err{color:var(--brand-deep);font-weight:500}
+  .honey{position:absolute;left:-5000px;opacity:0;pointer-events:none}
+
+  footer{
+    margin-top:auto;border-top:1px solid var(--line);
+    padding:22px 0 30px;
+  }
+  footer .wrap{
+    display:flex;align-items:center;justify-content:space-between;gap:10px;
+    font-family:"IBM Plex Mono",monospace;
+    font-size:12px;color:var(--muted);
+  }
+
+  :focus-visible{outline:2px solid var(--brand);outline-offset:2px;border-radius:4px}
+
+  @media (max-width:520px){
+    .hero{padding-top:42px}
+    .cta-bar{flex-direction:column;align-items:stretch}
+    .cta-bar .btn{justify-content:center}
+    .cta-note{text-align:center}
+    .waitlist-form{flex-direction:column}
+    .waitlist-form .btn{justify-content:center}
+  }
+
+  @media (prefers-reduced-motion:no-preference){
+    .rise{opacity:0;transform:translateY(14px);animation:rise .55s cubic-bezier(.22,.9,.3,1) forwards}
+    .d1{animation-delay:.05s}.d2{animation-delay:.14s}.d3{animation-delay:.23s}
+    @keyframes rise{to{opacity:1;transform:none}}
+  }
+</style>
+</head>
+<body>
+
+<header class="top wrap">
+  <a class="wordmark" href="/" aria-label="Madvera home"><span class="block" aria-hidden="true"></span>MADVERA</a>
+</header>
+
+<section class="hero wrap rise d1">
+  <h1>Get Madvera.</h1>
+  <p>One file, straight to your computer. No signup, no installer, no nonsense.</p>
+</section>
+
+<main class="feed wrap">
+
+  <article class="card rise d2" id="download" aria-label="Madvera download">
+    <div class="card-meta">
+      <span class="who"><span class="block" aria-hidden="true"></span>Madvera · Sponsored</span>
+      <span>1 of 1</span>
+    </div>
+    <div class="card-body">
+      <h2>The Madvera file.</h2>
+      <p class="desc">Everything Madvera fits in one download. Grab it, open it, go.</p>
+      <div class="file">
+        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" aria-hidden="true">
+          <rect x="4" y="2" width="22" height="26" rx="4" fill="#C90B5F" opacity=".12"/>
+          <path d="M15 9v9m0 0-3.5-3.5M15 18l3.5-3.5" stroke="#C90B5F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M10 23h10" stroke="#C90B5F" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <div>
+          <div class="name">madvera.zip</div>
+          <div class="kind">ZIP · v1.0</div>
+        </div>
+      </div>
+    </div>
+    <div class="cta-bar">
+      <span class="cta-note">Free. No email required.</span>
+      <a class="btn" href="downloads/madvera.zip" download="madvera.zip">Download</a>
+    </div>
+  </article>
+
+  <article class="card rise d3" id="waitlist" aria-label="Madvera Ad Generation waitlist">
+    <div class="card-body">
+      <span class="eyebrow">WAITLIST OPEN</span>
+      <h2>Madvera Ad Generation Coming Soon</h2>
+      <p class="desc">Create winning Facebook ads with one prompt</p>
+      <form class="waitlist-form" id="waitlistForm" novalidate>
+        <label class="honey" aria-hidden="true">Leave this empty <input type="text" name="_honey" tabindex="-1" autocomplete="off"></label>
+        <input type="email" name="email" id="email" required placeholder="you@agency.com" autocomplete="email" aria-label="Email address">
+        <button class="btn" type="submit" id="joinBtn">Join the waitlist</button>
+      </form>
+      <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+    </div>
+  </article>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Madvera</span>
+    <span>madvera</span>
+  </div>
+</footer>
+
+<script>
+  const form = document.getElementById('waitlistForm');
+  const btn = document.getElementById('joinBtn');
+  const email = document.getElementById('email');
+  const status = document.getElementById('formStatus');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    status.className = 'form-status';
+    status.textContent = '';
+
+    if (!email.checkValidity()) {
+      status.classList.add('err');
+      status.textContent = 'Enter a valid email address.';
+      email.focus();
+      return;
+    }
+    if (form._honey.value) { // bot
+      status.classList.add('ok');
+      status.textContent = "You're on the list.";
+      return;
+    }
+
+    btn.disabled = true;
+    btn.textContent = 'Joining…';
+
+    try {
+      const res = await fetch('https://formsubmit.co/ajax/jordan@hayesmedia.co', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          email: email.value.trim(),
+          _subject: 'New Madvera waitlist signup',
+          _template: 'table',
+          _autoresponse: "You're on the Madvera waitlist. We'll email you the moment Ad Generation goes live — winning Facebook ads from one prompt. — Madvera"
+        })
+      });
+      const data = await res.json().catch(() => ({}));
+      if (res.ok && String(data.success) === 'true') {
+        form.hidden = true;
+        status.classList.add('ok');
+        status.textContent = "You're on the list. A confirmation email is on its way.";
+      } else {
+        throw new Error(data.message || 'Request failed');
+      }
+    } catch (err) {
+      status.classList.add('err');
+      status.textContent = "Something went wrong on our end. Try again in a minute.";
+      btn.disabled = false;
+      btn.textContent = 'Join the waitlist';
+    }
+  });
+</script>
+
+</body>
+</html>
