@@ -25,8 +25,8 @@ Per signup it sends two emails via **Resend**:
 
 - **Notification** to `NOTIFY_TO` (jordan@hayesmedia.co) — "New Madvera waitlist signup".
 - **Confirmation** to the subscriber from `MAIL_FROM`
-  (currently `Madvera <madvera@notifications.osmihealth.co>` — the Resend-verified
-  Osmi domain; verify a Madvera domain in Resend later and update the var).
+  (`Madvera <madvera@hayesmedia.co>` — hayesmedia.co is verified on the
+  Hayes Media Resend account, whose key the service uses).
 
 Service env vars: `RESEND_API_KEY`, `MAIL_FROM`, `NOTIFY_TO`, `ALLOWED_ORIGIN`.
 Deploy changes with `railway up -d` from `waitlist/`. Confirmation copy lives in
